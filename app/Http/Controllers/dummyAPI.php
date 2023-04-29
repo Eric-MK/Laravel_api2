@@ -8,6 +8,10 @@ class dummyAPI extends Controller
 {
     function getData()
     {
-        return ['name' => 'anil'];//return data in json format
+        return [
+            'name' => 'anil',
+            'email' => 'anil@test.com',
+            'city' => 'Nairobi'
+        ];//return data in json format
     }
 }
