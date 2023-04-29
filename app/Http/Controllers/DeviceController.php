@@ -7,8 +7,8 @@ use Illuminate\Http\Request;
 
 class DeviceController extends Controller
 {
-    function list()
+    function list($id)
     {
-        return Device::all();
+        return Device::find($id);
     }
 }
