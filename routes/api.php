@@ -27,3 +27,4 @@ Route::get('data', [dummyAPI::class, 'getData']);
 
 Route::get('list/{id?}',[DeviceController::class, 'list']);//making the id optional
 
+Route::post('add', [DeviceController::class, 'add']);
