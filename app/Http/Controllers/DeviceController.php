@@ -30,4 +30,22 @@ class DeviceController extends Controller
         }
     }
 
+    function update(Request $req)
+    {
+        $device = Device::find($req->id);//find id to update
+        $device->name=$req->name;
+        $device->email=$req->email;
+        $result = $device->save();
+
+        if($result)
+        {
+            return ["result" => "data has been updated"];
+
+        }
+        else
+        {
+            return ["result" => "data has not been updated"];
+
+        }
+    }
 }
