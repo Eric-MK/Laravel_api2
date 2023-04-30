@@ -48,4 +48,10 @@ class DeviceController extends Controller
 
         }
     }
+
+    function search($name)
+    {
+        return Device::where('name', $name)->get();//get() is used to retrieve all devices that match a certain name and When get() is called on the query builder instance, it executes the SQL query and returns the results as a collection of Device objects.
+
+    }
 }
