@@ -77,8 +77,9 @@ class DeviceController extends Controller
     {
         $rules=[
             "email"=>"required"
+            //"member_id"=>"required|min:2|max:4"  atleast 2 characters
         ];
-        $validator = Validator::make($req->all(),$rules);//$req->all() gets the request object with the parameters checks the $rules for rules 
+        $validator = Validator::make($req->all(),$rules);//$req->all() gets the request object with the parameters checks the $rules for rules
 
         if($validator->fails())
         {
