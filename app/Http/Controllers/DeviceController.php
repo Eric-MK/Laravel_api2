@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Device;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 
 class DeviceController extends Controller
@@ -70,5 +71,24 @@ class DeviceController extends Controller
             return ["Result" => "Delete operation has failed  ".$id];
 
         }
+    }
+
+    function testData(Request $req)
+    {
+        $rules=[
+            "email"=>"required"
+        ];
+        $validator = Validator::make($req->all(),$rules);//$req->all() gets the request object with the parameters checks the $rules for rules 
+
+        if($validator->fails())
+        {
+            return $validator->errors();
+        }
+        else
+        {
+            return ["x" => "y"];
+
+        }
+
     }
 }
