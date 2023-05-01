@@ -87,8 +87,19 @@ class DeviceController extends Controller
         }
         else
         {
-            return ["x" => "y"];
+            $device = new Device;
+            $device->name=$req->name;
+            $device->email=$req->email;
+            $result=$device->save();//to save the data to the database and returns a boolean value to indicate if it was successful or not
+            if($result)
+            {
+                return ["Result" => "Data has been saved"];
 
+            }
+            else
+            {
+                return ["Result"=>"Operation failed"];
+            }
         }
 
     }
