@@ -83,7 +83,8 @@ class DeviceController extends Controller
 
         if($validator->fails())
         {
-            return $validator->errors();
+            //return $validator->errors();
+            return response()->json($validator->errors(),401);
         }
         else
         {
