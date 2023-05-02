@@ -1,9 +1,10 @@
 <?php
 
-use App\Http\Controllers\DeviceController;
-use App\Http\Controllers\dummyAPI;
 use Illuminate\Http\Request;
+use App\Http\Controllers\dummyAPI;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DeviceController;
+use App\Http\Controllers\MemberController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,3 +33,5 @@ Route::put('update', [DeviceController::class, 'update']);
 Route::get('search/{name}', [DeviceController::class,'search']);
 Route::delete('delete/{id}', [DeviceController::class,'delete']);
 Route::post('save', [DeviceController::class,'testData']);
+
+route::apiResource("member",MemberController::class);//saves time
