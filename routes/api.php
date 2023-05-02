@@ -35,3 +35,14 @@ Route::delete('delete/{id}', [DeviceController::class,'delete']);
 Route::post('save', [DeviceController::class,'testData']);
 
 route::apiResource("member",MemberController::class);//saves time
+//Route::apiResource() is a method provided by Laravel for defining routes that will interact with a resource controller.
+
+
+/* Laravel will automatically generate the following URLs:
+
+GET      members            => MemberController@index
+POST     /members            => MemberController@store
+GET      /members/{member}   => MemberController@show
+PUT      /members/{member}   => MemberController@update
+DELETE   /members/{member}   => MemberController@destroy
+ */

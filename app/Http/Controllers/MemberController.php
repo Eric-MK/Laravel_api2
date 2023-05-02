@@ -63,6 +63,11 @@ class MemberController extends Controller
     public function destroy(string $id)
     {
         //
-        return["result"=>"data list"];
     }
 }
+/* index() method for retrieving a list of resources.
+store() method for creating a new resource.
+show() method for retrieving a single resource.
+update() method for updating an existing resource.
+destroy() method for deleting a resource.
+ */
